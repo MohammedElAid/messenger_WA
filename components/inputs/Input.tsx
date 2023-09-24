@@ -58,8 +58,8 @@ const Input = ({
                     placeholder:text-gray-400
                     focus:ring-sky-600
                     sm:text-sm
-                    sm:leading-6
-                    `, errors[id] && "focus:ring-rose-500",
+                    sm:leading-6`,
+                        errors[id] && "focus:ring-rose-500",
                         disabled && "opacity-50 cursor-default"
                     )}
                 />
