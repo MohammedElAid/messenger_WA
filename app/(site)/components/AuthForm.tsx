@@ -1,11 +1,17 @@
 'use client'
 
+
 import { useCallback, useState } from 'react'
 import {
     FieldValues,
-    FormSubmitHandler,
-    useForm
+    SubmitHandler,
+    useForm,
+
 } from 'react-hook-form'
+
+
+import Input from '@/components/inputs/Input'
+
 
 type Variant = 'LOGIN' | 'REGISTER'
 const AuthForm = () => {
@@ -34,7 +40,7 @@ const AuthForm = () => {
 
     })
 
-    const onSubmit: FormSubmitHandler<FieldValues> = (data) => {
+    const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true)
         if (variant === "LOGIN") {
             //Axios register
@@ -45,9 +51,41 @@ const AuthForm = () => {
     }
     const socialAction = (action: string) => {
         setIsLoading(true)
+
+        //NextAuth login
     }
     return (
-        <div>
+        <div
+            className='
+        mt-8
+        sm:mx-auto
+        sm:w-full
+        sm:max-w-md
+        '
+        >
+            <div
+                className='
+            bg-white
+            px-4
+            py-8
+            shadow-md
+            sm:rounded-lg
+            sm:px-10
+            '
+            >
+                <form
+                    className='space-y-6'
+                    onSubmit={handleSubmit(onSubmit)}
+                >
+                    <Input
+                        id='email'
+                        label='Email'
+                        type='email'
+                        register={register}
+                        errors={errors} />
+
+                </form>
+            </div>
             Auth Form !
         </div>
     )
