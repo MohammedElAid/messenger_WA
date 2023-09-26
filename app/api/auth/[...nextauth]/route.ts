@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-import nextAuth, { AuthOptions } from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GithubPrivider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
@@ -65,7 +65,7 @@ export const authOptions: AuthOptions = {
 };
 
 
-const handler = nextAuth(authOptions);
+const handler = NextAuth(authOptions);
 
 
 
