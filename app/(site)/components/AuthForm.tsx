@@ -13,8 +13,8 @@ import {
 } from 'react-hook-form'
 
 
-import Input from '@/components/inputs/Input'
-import Button from '@/components/Button'
+import Input from '@/app/components/inputs/Input'
+import Button from '@/app/components/Button'
 import AuthSocialButton from './AuthSocialButton'
 
 
