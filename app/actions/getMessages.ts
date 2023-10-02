@@ -14,7 +14,7 @@ const getMessages = async (
                 seen: true,
             },
             orderBy: {
-                createAt: 'asc'
+                createdAt: 'asc'
             }
         })
         return messages
