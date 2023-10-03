@@ -1,10 +1,11 @@
 'use client'
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import { FullMessageType } from "@/app/types"
 import useConversation from "@/app/hooks/useConversation"
 import MessageBox from "./MessageBox"
+import axios from "axios"
 
 
 interface BodyProps {
@@ -15,6 +16,12 @@ const Body = ({
 }: BodyProps) => {
     const [messages, setMessages] = useState(initialMessages)
     const bottomRef = useRef<HTMLDivElement>(null);
+
+
+
+    useEffect(() => {
+        axios.post(`/api/conversations/${conversationId}/seen`)
+    }, [])
 
 
 
