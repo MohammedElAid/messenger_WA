@@ -14,7 +14,7 @@ interface DesktopSidebarProps {
 
 const DesktopSidebar = ({ currentUser }: DesktopSidebarProps) => {
     const routes = useRoutes()
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     return (
         <>
