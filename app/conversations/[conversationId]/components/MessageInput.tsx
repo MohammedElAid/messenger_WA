@@ -24,7 +24,7 @@ const MessageInput = ({
             <input
                 id={id}
                 type={type}
-                autoComplete={id}
+                autoComplete='off'
                 {...register(id, { required })}
                 placeholder={placeholder}
                 className="
